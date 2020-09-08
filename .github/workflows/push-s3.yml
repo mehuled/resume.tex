@@ -17,6 +17,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v2
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1

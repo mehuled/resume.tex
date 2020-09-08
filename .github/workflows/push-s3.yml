@@ -25,4 +25,4 @@ jobs:
         run: |
           sudo apt-get install texlive
           pdflatex ./source/main.tex
-          aws s3 cp ./main.pdf s3://com.dflipflop/resume/Mehul-Sharma.pdf
+          aws s3 cp ./source/main.pdf s3://com.dflipflop/resume/Mehul-Sharma.pdf

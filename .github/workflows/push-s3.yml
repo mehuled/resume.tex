@@ -35,3 +35,7 @@ jobs:
           pwd          
           pdflatex ./source/main.tex
           aws s3 cp main.pdf s3://com.dflipflop/resume/Mehul-Sharma.pdf
+          aws s3api put-object-acl --bucket com.dflipflop --key resume/Mehul-Sharma.pdf --acl public-read 
+      
+      
+      

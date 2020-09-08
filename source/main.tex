@@ -1,0 +1,144 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Mehul Sharma}}\\
+	mehulcse0209@gmail.com $\cdot$ +919548846429 $\cdot$ https://dflipflop.com\\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Innovaccer} \hfill Noida, India\\
+\textit{Software Development Engineer - Platform} \hfill Jun 2019 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0.5pt
+	\item Built scalabale parsers and other data standardisation modules for the Data Platform which are being used to ingest hundreds of GBs of data daily.
+	\item Designed and developed a framework to migrate existing Hadoop Based implementation of the Data processing engine to AWS Redshift and thus made the platform more reliable and cost efficient.  
+	\item Built AWS Lambda functions that allowed us to scale our data handling capacities by performing concurrent transformations on the source files.
+\end{itemize}
+\textbf{Opslyft} \hfill San Francisco (Remote)\\
+\textit{Software Development Engineer} \hfill Jan 2019 - May 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0.5pt
+	\item Conceived and built the first version of the product where we used CUR reports with AWS Athena to provide customised dashboards to our customers with 1-click integration via cloud-formation templates. 
+	\item Responsible for demo and delivery of the product to our initial customers, also lead the way for customer feedback and integration of these feedback back into our product. 
+	\item Implemented features like RI right sizing, Idle resources management, CLI integration to the product as per the feedback reccieved from our initial customers.
+\end{itemize}
+\textbf{Innovaccer} \hfill Noida, India\\
+\textit{Software Development Engineer (Intern) - Platform} \hfill May 2018 - July 2018\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0.5pt
+	\item Built services monitoring dashboards for crucial services of the team using the ELK stack .
+	\item Built log archiving service by extracting and compressing log files from our services and storing them onto AWS S3
+	\item Worked with the data Integration teams and built high productivity tools like JSON to Elasticsearch QueryDSL mapper, SQL validation that helped them get more done easily.
+\end{itemize}
+
+
+\header{Projects}
+{\textbf{Omycode.dev}} {\sl Typescript, ANTLR, Java, REST APIs, Postgres} \hfill https://omycode.dev/\\
+A language parsing tool to generate call graphs, code heat map and determine the run-time complexity of the code using grammar parsers generated using ANTLR and Wolfram APIs\\
+\vspace*{2mm}
+{\textbf{NAND to Tetris}} {\sl Java, JVM, Assembly, HDL} \hfill https://git.io/JUnui  \\
+Built a modern computer from first principles starting with a NAND gate, went on to write HDL for a ALU, an Assembler, a Compiler, JVM analogous virtual machine for a modern programming language called Jack.\\
+\vspace*{2mm}
+{\textbf{Voice assistant for Linux}} {\sl Python, AWS Lambda, Paramiko} \hfill https://git.io/JUnuK\\
+Implemented a voice-based assistant for my Linux machine by integrating AWS Lex, Alexa, AWS Lambda, Paramiko to execute remote calls on my Linux machine.\\
+\vspace*{2mm}
+{\textbf{Process Pong}} {\sl C++, XV6 OS, Inter-process communication} \hfill https://git.io/JUnup\\
+Built a inter-process pong to better understand Inter process communication as part of working with the source code of educational XV6 OS and corresponding book.
+\vspace*{2mm}
+
+\header{Skills}
+\vspace{2mm}
+\begin{tabular}{ ll}
+	\textbf{Programming Languages}: & Java, Scala, Python, C++, Bash                       \\
+	\textbf{Technologies}:           & OS, JVM, Serverless, Postgres, Flask, AWS Redshift, Hadoop Ecosys.  \\
+	\vspace{1mm}
+\end{tabular}
+
+%==== Education ====%
+\header{Education}
+\textbf{The LNM Institute of Information Technology, Jaipur}\hfill Jaipur, India\\
+B.Tech Computer Science \& Engineering \hfill July 2015 - Jun 2019\\
+	\vspace{2mm}
+\textbf{Courses} : 
+\textit{Internet of Things, Operating Systems, Computer Networks, Wearable Computing, OOP, Entrepreneurship Practice, Consumer Psychology and others.}
+\vspace{2mm}
+
+
+\vspace*{2mm}
+
+\ 
+\end{document}

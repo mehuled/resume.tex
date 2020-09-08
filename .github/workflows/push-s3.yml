@@ -28,7 +28,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get install texlive texlive-latex-extra
-          pdflatex ./source/main.tex
           ls
-          pwd
+          pwd          
+          pdflatex ./source/main.tex
           aws s3 cp main.pdf s3://com.dflipflop/resume/Mehul-Sharma.pdf

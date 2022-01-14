@@ -5,6 +5,7 @@
     \usepackage{textcomp}
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
     \textheight=10in
     \pagestyle{empty}
     \raggedright
@@ -73,58 +74,69 @@
 \vspace*{-10pt}
 \begin{center}
 	{\Huge \scshape {Mehul Sharma}}\\
-	mehulcse0209@gmail.com $\cdot$ +919548846429 $\cdot$ https://dflipflop.com\\
+	\href{mailto:mehulcse0209@gmail.com}{mehulcse0209@gmail.com} $\cdot$  +91-8769883659 
+	
 \end{center}
+
+% \begin{flushright}
+% 	\textbf{Github}: & github.com/mehuled\\
+% 	\textbf{Programming Languages}: & Go, Java
+% \end{flushright}
 
 %==== Experience ====%
 \header{Experience}
 \vspace{1mm}
-
-\textbf{Innovaccer} \hfill Noida, India\\
-\textit{Software Development Engineer - Platform} \hfill Jun 2019 - Present\\
+\textbf{\href{http://razorpay.com/}{Razorpay}} \hfill Bengaluru, KA, India\\
+\textit{Senior Software Development Engineer} \hfill Oct 2021 - Present\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 0.5pt
-	\item Built scalabale parsers and other data standardisation modules for the Data Platform which are being used to ingest hundreds of GBs of data daily.
-	\item Designed and developed a framework to migrate existing Hadoop Based implementation of the Data processing engine to AWS Redshift and thus made the platform more reliable and cost efficient.  
-	\item Built AWS Lambda functions that allowed us to scale our data handling capacities by performing concurrent transformations on the source files.
+	\item Building and maintaining high scale (3000 rps) and low latency (5 ms) controlled feature roll-out and experimentation services that are used by multiple BUs to confidently do feature roll-outs.
+	\item Developed golang SDK for in-house experimentation service to reduce friction in adoption and foster a culture of feature experimentation, led to 80 experiments being live from 0 baseline.
+	\item Built experiment instrumentation feature to capture events funnel for different variants and conclude winning variant of an experiment. 
 \end{itemize}
-\textbf{Opslyft} \hfill San Francisco (Remote)\\
+\textit{Software Development Engineer} \hfill May 2021 - Sep 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0.5pt
+	\item Built and evangelised dynamic user segmentation in the experimentation service, using bloom filter to support set-membership evaluation of upto 10M merchants in constant time.
+	\item Actively contributed to uphold the engineering culture at Razorpay by contributing to in-house standard packages, collaborating with multiple teams to build the right solutions.
+\end{itemize}
+\textbf{\href{https://innovaccer.com/}{Innovaccer}} \hfill Noida, India\\
+\textit{Software Development Engineer - Platform} \hfill Jun 2019 - May 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 0.5pt
+	\item Built TBs scalabale data parsers and data standardisation modules for parsing CSV, HL7, CCDA, X12 and other healthcare specific data formats for the Data Platform.
+	\item Designed and developed a framework to migrate existing Hadoop/Spark based implementation of the data processing engine to AWS Redshift and eventually to Postgres and thus made the platform ACID compliant and cost effective with 99.99\% availability.
+\end{itemize}
+\textbf{\href{https://opslyft.com/}{Opslyft}} \hfill San Francisco (Remote)\\
 \textit{Software Development Engineer} \hfill Jan 2019 - May 2019\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 0.5pt
-	\item Conceived and built the first version of the product where we used CUR reports with AWS Athena to provide customised dashboards to our customers with 1-click integration via cloud-formation templates. 
-	\item Responsible for demo and delivery of the product to our initial customers, also lead the way for customer feedback and integration of these feedback back into our product. 
-	\item Implemented features like RI right sizing, Idle resources management, CLI integration to the product as per the feedback reccieved from our initial customers.
+	\item Conceived and built the first version of the product, used CUR reports with AWS Athena to provide customised dashboards to our customers with 1-click integration via Cloud Formation templates. Got us our first customer.
+	\item Implemented features like RI right sizing, idle resources management, CLI integration to the product as per the feedback received from our initial customers.
 \end{itemize}
-\textbf{Innovaccer} \hfill Noida, India\\
+\textbf{\href{https://innovaccer.com/}{Innovaccer}} \hfill Noida, India\\
 \textit{Software Development Engineer (Intern) - Platform} \hfill May 2018 - July 2018\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 0.5pt
-	\item Built services monitoring dashboards for crucial services of the team using the ELK stack .
-	\item Built log archiving service by extracting and compressing log files from our services and storing them onto AWS S3
-	\item Worked with the data Integration teams and built high productivity tools like JSON to Elasticsearch QueryDSL mapper, SQL validation that helped them get more done easily.
+	\item Built in-house logs archiving service by extracting and compressing application logs from our services and storing them onto AWS S3.
 \end{itemize}
 
 
 \header{Projects}
-{\textbf{Omycode.dev}} {\sl Typescript, ANTLR, Java, REST APIs, Postgres} \hfill https://omycode.dev/\\
-A language parsing tool to generate call graphs, code heat map and determine the run-time complexity of the code using grammar parsers generated using ANTLR and Wolfram APIs\\
 \vspace*{2mm}
-{\textbf{NAND to Tetris}} {\sl Java, JVM, Assembly, HDL} \hfill https://git.io/JUnui  \\
+{\textbf{NAND to Tetris}} {\sl Java, JVM, Assembly, HDL} \hfill \href{https://git.io/JUnui}{https://git.io/JUnui}  \\
 Built a modern computer from first principles starting with a NAND gate, went on to write HDL for a ALU, an Assembler, a Compiler, JVM analogous virtual machine for a modern programming language called Jack.\\
 \vspace*{2mm}
-{\textbf{Voice assistant for Linux}} {\sl Python, AWS Lambda, Paramiko} \hfill https://git.io/JUnuK\\
+{\textbf{Voice assistant for Linux}} {\sl Python, AWS Lambda, Paramiko} \hfill \href{https://git.io/JUnuK}{https://git.io/JUnuK}\\
 Implemented a voice-based assistant for my Linux machine by integrating AWS Lex, Alexa, AWS Lambda, Paramiko to execute remote calls on my Linux machine.\\
 \vspace*{2mm}
-{\textbf{Process Pong}} {\sl C++, XV6 OS, Inter-process communication} \hfill https://git.io/JUnup\\
-Built a inter-process pong to better understand Inter process communication as part of working with the source code of educational XV6 OS and corresponding book.
 \vspace*{2mm}
 
 \header{Skills}
 \vspace{2mm}
 \begin{tabular}{ ll}
-	\textbf{Programming Languages}: & Java, Scala, Python, C++, Bash                       \\
-	\textbf{Technologies}:           & OS, JVM, Serverless, Postgres, Flask, AWS Redshift, Hadoop Ecosys.  \\
+	\textbf{Programming Languages}: & Go, Java\\
+	\textbf{Technologies}:           & Kubernetes, Microservices, Databases, Object Storage, AWS  \\
 	\vspace{1mm}
 \end{tabular}
 
@@ -134,7 +146,7 @@ Built a inter-process pong to better understand Inter process communication as p
 B.Tech Computer Science \& Engineering \hfill July 2015 - Jun 2019\\
 	\vspace{2mm}
 \textbf{Courses} : 
-\textit{Internet of Things, Operating Systems, Computer Networks, Wearable Computing, OOP, Entrepreneurship Practice, Consumer Psychology and others.}
+\textit{Design and Analysis of Algorithms, Compiler Design, Operating Systems, Computer Networks, DBMS, Wearable Computing, OOP, Consumer Psychology and others.}
 \vspace{2mm}
 
 
